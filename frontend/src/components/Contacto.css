@@ -1,0 +1,21 @@
+#contacto { padding: 65px 6%; background: #fff7eb; color: #4b3425; }
+#contacto > h2 { color: #d97706; text-align: center; font-size: clamp(28px, 4vw, 38px); margin-bottom: 30px; }
+.contacto-contenido { max-width: 1150px; margin: auto; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 32px; align-items: start; }
+.contacto-presentacion { padding: 24px 8px; }
+.contacto-presentacion h3 { color: #92400e; font-size: 25px; margin: 0 0 16px; }
+.contacto-presentacion p { color: #745b4a; line-height: 1.7; margin: 0 0 16px; }
+.contacto-aclaracion { font-size: 13px; }
+.contacto-formulario { background: white; border-radius: 18px; padding: 28px; box-shadow: 0 8px 26px rgba(80,48,20,.09); display: flex; flex-direction: column; gap: 17px; }
+.contacto-formulario label { display: flex; flex-direction: column; gap: 7px; text-align: left; color: #654321; font-size: 14px; font-weight: 600; }
+.contacto-dos-columnas { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; }
+.contacto-formulario input, .contacto-formulario textarea { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #dfcbb6; border-radius: 10px; font: inherit; font-size: 14px; background: #fffdf9; color: #4b3425; }
+.contacto-formulario input:focus, .contacto-formulario textarea:focus { outline: 2px solid #d97706; outline-offset: 1px; }
+.contacto-formulario textarea { resize: vertical; }
+.contacto-formulario button { align-self: flex-start; border: 0; border-radius: 10px; padding: 13px 25px; background: #d97706; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+.contacto-formulario button:hover:not(:disabled) { background: #b45309; }
+.contacto-formulario button:disabled { opacity: .6; cursor: wait; }
+.contacto-error, .contacto-exito { padding: 12px; border-radius: 8px; margin: 0; font-size: 13px; }
+.contacto-error { background: #fff0ed; color: #b42318; }
+.contacto-exito { background: #edf8ef; color: #26713a; }
+@media (max-width: 800px) { .contacto-contenido { grid-template-columns: 1fr; gap: 10px; } .contacto-presentacion { padding: 0; } }
+@media (max-width: 550px) { .contacto-dos-columnas { grid-template-columns: 1fr; } .contacto-formulario { padding: 18px; } }

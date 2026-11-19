@@ -1,0 +1,738 @@
+
+/* =========================================
+   GOTA DE NIEVE - HOJA DE ESTILOS GENERAL
+========================================= */
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffdf8;
+  color: #333;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+
+header {
+  background: #ffd166;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGOTIPO */
+
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+/* MENÚ */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6d4c41;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* CONTADOR DEL CARRITO */
+
+.contador-carrito {
+  background: #ff7f50;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* =========================================
+   SECCIÓN DE INICIO
+========================================= */
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 420px;
+  padding: 80px 8%;
+  background: #fff8e7;
+}
+
+#inicio h1 {
+  font-size: 45px;
+  color: #d97706;
+  margin-bottom: 12px;
+}
+
+#inicio p {
+  max-width: 600px;
+  margin-bottom: 8px;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+#inicio a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 25px;
+  background: #ff7f50;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#inicio a:hover {
+  background: #e85d2a;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   CATÁLOGO DE PRODUCTOS
+========================================= */
+
+#sabores {
+  padding: 60px 6%;
+  text-align: center;
+}
+
+#sabores h2 {
+  font-size: 38px;
+  color: #d97706;
+  margin-bottom: 40px;
+}
+
+/* DISTRIBUCIÓN DE PRODUCTOS */
+
+.productos {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* TARJETAS */
+
+.producto-card {
+  min-width: 0;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.producto-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* IMÁGENES DE PRODUCTOS */
+
+.producto-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: contain;
+  background: #fffdf8;
+}
+
+/* INFORMACIÓN DEL PRODUCTO */
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-info h3 {
+  color: #d97706;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  color: #666;
+  line-height: 1.5;
+  min-height: 65px;
+  margin-bottom: 12px;
+}
+
+.precio {
+  color: #6d4c41;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* PRESENTACIONES */
+
+.producto-info label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #6d4c41;
+}
+
+.producto-info select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #e0c9a6;
+  border-radius: 8px;
+  background: #fffdf8;
+  margin-bottom: 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* BOTÓN AGREGAR AL CARRITO */
+
+.btn-agregar {
+  width: 100%;
+  padding: 13px;
+  background: #ff7f50;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-agregar:hover {
+  background: #e85d2a;
+}
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+#galeria {
+  padding: 60px 8%;
+  background: #fff2f2;
+  text-align: center;
+}
+
+#galeria h2 {
+  font-size: 38px;
+  color: #d97706;
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+#contacto {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #d97706;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#contacto p {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+  background: #6d4c41;
+  color: white;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+footer p {
+  line-height: 1.7;
+}
+
+/* =========================================
+   ADAPTACIÓN PARA TABLETAS
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =========================================
+   ADAPTACIÓN PARA CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* ENCABEZADO */
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 5%;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  /* INICIO */
+
+  #inicio {
+    min-height: 350px;
+    padding: 50px 7%;
+    text-align: center;
+    align-items: center;
+  }
+
+  #inicio h1 {
+    font-size: 30px;
+  }
+
+  #inicio p {
+    font-size: 16px;
+  }
+
+  /* CATÁLOGO */
+
+  #sabores {
+    padding: 45px 5%;
+  }
+
+  #sabores h2 {
+    font-size: 30px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    gap: 24px;
+  }
+
+  .producto-card > img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .producto-info {
+    padding: 18px;
+  }
+
+  /* GALERÍA */
+
+  #galeria {
+    padding: 45px 5%;
+  }
+
+  #galeria h2 {
+    font-size: 30px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  /* CONTACTO */
+
+  #contacto {
+    padding: 45px 5%;
+  }
+
+  #contacto h2 {
+    font-size: 28px;
+  }
+
+  /* PIE DE PÁGINA */
+
+  footer {
+    padding: 30px 5%;
+  }
+
+}
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  #inicio h1 {
+    font-size: 26px;
+  }
+
+  .producto-info h3 {
+    font-size: 21px;
+  }
+
+}
+
+/* BOTÓN PARA ABRIR EL CARRITO */
+.btn-ver-carrito {
+  background: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-ver-carrito:hover {
+  background: #e85d2a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .btn-ver-carrito {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+}
+/* CARRITO FLOTANTE */
+.btn-ver-carrito {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* POSICIÓN EN CELULARES */
+@media (max-width: 600px) {
+  .btn-ver-carrito {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* ESTADOS DEL CATÁLOGO */
+.mensaje-catalogo {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 22px;
+  text-align: center;
+  background: #fff8e7;
+  color: #6d4c41;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.error-catalogo {
+  background: #fff0ed;
+  color: #b42318;
+  border: 1px solid #f5c2bb;
+}
+
+.btn-agregar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* SISTEMA DE USUARIOS */
+
+.usuario-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.usuario-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.usuario-rol {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #fff3df;
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-mi-cuenta,
+.btn-cerrar-sesion {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-mi-cuenta {
+  background: #d97706;
+  color: #ffffff;
+}
+
+.btn-mi-cuenta:hover {
+  background: #b45309;
+}
+
+.btn-cerrar-sesion {
+  background: #f3e8dc;
+  color: #795548;
+}
+
+.btn-cerrar-sesion:hover {
+  background: #e8d5c0;
+}
+
+.btn-cerrar-sesion:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .usuario-menu {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .usuario-nombre {
+    font-size: 13px;
+  }
+
+  .btn-mi-cuenta,
+  .btn-cerrar-sesion {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+}
+
+/* BOTÓN DEL PANEL ADMINISTRATIVO */
+
+.btn-panel-admin {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #92400e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-panel-admin:hover {
+  background: #78350f;
+}
+
+@media (max-width: 768px) {
+  .btn-panel-admin {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   ENCABEZADO ORGANIZADO - GOTA DE NIEVE
+   ========================================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 3%;
+}
+
+header .logo {
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+header nav > a {
+  white-space: nowrap;
+}
+
+/* AGRUPACIÓN DE CONTROLES DEL USUARIO */
+
+.usuario-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-left: auto;
+}
+
+.usuario-nombre {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.usuario-rol {
+  font-size: 11px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.btn-panel-admin,
+.btn-cerrar-sesion,
+.btn-mi-cuenta {
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* PANTALLAS MEDIANAS */
+
+@media (max-width: 1100px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .usuario-menu {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 14px;
+    padding: 15px;
+  }
+
+  header .logo {
+    width: 80px;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .usuario-menu {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .usuario-nombre {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-panel-admin,
+  .btn-cerrar-sesion {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}

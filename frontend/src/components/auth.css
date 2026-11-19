@@ -1,0 +1,225 @@
+
+/* CONTENEDOR DE AUTENTICACIÓN */
+
+.auth-contenedor {
+  width: 100%;
+  min-height: 70vh;
+  padding: 55px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffaf2;
+}
+
+.auth-tarjeta {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 38px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(80, 48, 20, 0.12);
+}
+
+.auth-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #795548;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.auth-encabezado {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+}
+
+.auth-encabezado h2 {
+  font-size: 29px;
+  color: #92400e;
+  margin-bottom: 10px;
+}
+
+.auth-encabezado p {
+  color: #806b5c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* PESTAÑAS */
+
+.auth-pestanas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 5px;
+  background: #fff3df;
+  border-radius: 12px;
+}
+
+.auth-pestanas button {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #865d3d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-pestanas button.activo {
+  background: #d97706;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(217, 119, 6, 0.2);
+}
+
+/* CAMPOS */
+
+.auth-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.auth-campo label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #654321;
+}
+
+.auth-campo input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #e6d5c0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #3f2d20;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-campo input:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.12);
+}
+
+.auth-campo small {
+  color: #806b5c;
+  font-size: 12px;
+}
+
+/* MENSAJES */
+
+.auth-error,
+.auth-exito {
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.auth-error {
+  background: #fff0ed;
+  border: 1px solid #f5c2bb;
+  color: #b42318;
+}
+
+.auth-exito {
+  background: #edf8ef;
+  border: 1px solid #b8dfc0;
+  color: #26713a;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.auth-boton {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  background: #d97706;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.auth-boton:hover:not(:disabled) {
+  background: #b45309;
+  transform: translateY(-2px);
+}
+
+.auth-boton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ENLACE INFERIOR */
+
+.auth-pie {
+  margin-top: 25px;
+  text-align: center;
+  color: #806b5c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.auth-pie button {
+  display: inline;
+  margin-left: 5px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #c76a05;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-pie button:hover {
+  text-decoration: underline;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+  .auth-contenedor {
+    padding: 30px 14px;
+  }
+
+  .auth-tarjeta {
+    padding: 28px 22px;
+    border-radius: 17px;
+  }
+
+  .auth-encabezado h2 {
+    font-size: 25px;
+  }
+
+  .auth-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .auth-pestanas button {
+    font-size: 13px;
+  }
+}
