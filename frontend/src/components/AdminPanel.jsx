@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import './AdminPanel.css';
+import './adminPanel.css';
 
 const TRANSICIONES = {
   pendiente: ['confirmado', 'cancelado'],

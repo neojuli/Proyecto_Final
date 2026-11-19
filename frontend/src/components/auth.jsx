@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import './Auth.css';
+import './auth.css';
 
 function Auth({ onLogin, onClose }) {
   const [modo, setModo] = useState('login');
